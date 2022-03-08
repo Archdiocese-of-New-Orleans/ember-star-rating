@@ -1,11 +1,11 @@
-{{#each stars as |star index|}}
-  <svg width={{width}} height={{height}} xmlns="http://www.w3.org/2000/svg" viewBox={{viewBox}}>
+{{#each this.stars as |star index|}}
+  <svg width={{this.width}} height={{this.height}} xmlns="http://www.w3.org/2000/svg" viewBox={{this.viewBox}}>
     <defs>
-      <linearGradient id="{{elementId}}-star-{{index}}" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop class="star-rating-filled" offset="0%" stop-color={{fillColor}}></stop>
-        <stop class="star-rating-base" offset="0%" stop-color={{baseColor}}></stop>
+      <linearGradient id="{{this.elementId}}-star-{{index}}" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop class="star-rating-filled" offset="0%" stop-color={{this.fillColor}}></stop>
+        <stop class="star-rating-base" offset="0%" stop-color={{this.baseColor}}></stop>
       </linearGradient>
     </defs>
-    <path fill="url(#{{elementId}}-star-{{index}})" d={{svgPath}}></path>
+    <path fill="url(#{{this.elementId}}-star-{{index}})" d={{this.svgPath}}></path>
   </svg>
 {{/each}}
